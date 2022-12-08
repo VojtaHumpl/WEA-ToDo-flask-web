@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Projekt</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="loginDiv center">
+        <h1>Todo List</h1>
+        <form action="" method="post">
+            <div class="textField">
+                <input type="text" name="username" required>
+                <span></span>
+                <label>Username</label>
+            </div>
+            <div class="textField">
+                <input type="password" name="password" required>
+                <span></span>
+                <label>Password</label>
+            </div>
+            <input type="submit" value="Login">
+
+        </form>
+        {% if error %}
+            <p class="error"><strong>Error:</strong> {{ error }}
+        {% endif %}
+
+        <!--label style="display: block; padding: 5px;">Username:</label>
+        <input style="display: block; margin: 5px;" type="text">
+        <button style="display: block; margin-top: 15px; margin-left: 5px;">Login</button-->
+    </div>
+    
+</body>
+</html>
