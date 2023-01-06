@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+body {
+    background: rgb(77, 77, 77);
+    font-family: Tahoma, Geneva, Verdana, "Segoe UI", Roboto, Helvetica,
+      Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+ }
+  
+.main-container {
+    padding: 30px;
+}
+  
+/* HEADING */
+  
+.heading {
+    text-align: center;
+}
+  
+.heading_title {
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+}
+  
+/* CARDS */
+
+h2 {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.card_done_button,
+.card_remove_button,
+.add_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
+  
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: space-between;*/
+}
+  
+.card {
+  margin: 20px;
+  padding: 20px;
+  width: 500px;
+  min-height: 200px;
+  display: grid;
+  grid-template-rows: 20px 50px 1fr 50px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  background: radial-gradient(#1fe4f5, #3fbafe);
+}
+  
+.card:hover {
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+  transform: scale(1.02);
+}
+  
+.card_done_button,
+.card_remove_button {
+  position: relative;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.9);
+}
+  
+.card_done_button::after,
+.card_remove_button::after {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s;
+}
+  
+.card_done_button:hover::after,
+.card_remove_button:hover::after {
+  width: 100%;
+}
+  
+.card_content {
+  grid-row: 2/4;
+  grid-column: 1/span 2;
+  font-weight: 400;
+  color: #ffffff;
+  align-self: stretch;
+}
+  
+.card_done {
+  grid-row: 4/5;
+  align-self: center;
+}
+
+.card_remove {
+  grid-row: 4/5;
+  align-self: center;
+  text-align: right;
+}
+
+.new_card {
+  position: relative;
+  margin: 20px;
+  width: 500px;
+  min-height: 200px;
+  border-radius: 10px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  background: radial-gradient(#60efbc, #58d5c9);
+}
+
+.add_button {
+  width: 100%;
+  height: 100%;
+  border: black;
+  color: rgba(255, 255, 255, 0.9);
+  background-image: url("../static/plus.png");
+  background-size: 20%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+  /* CARD BACKGROUNDS */
+  
+  .card-1 {
+    background: radial-gradient(#1fe4f5, #3fbafe);
+  }
+  
+  .card-2 {
+    background: radial-gradient(#fbc1cc, #fa99b2);
+  }
+  
+  .card-3 {
+    background: radial-gradient(#76b2fe, #b69efe);
+  }
+  
+  .card-4 {
+    background: radial-gradient(#60efbc, #58d5c9);
+  }
+  
+  .card-5 {
+    background: radial-gradient(#f588d8, #c0a3e5);
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 1600px) {
+    .cards {
+      justify-content: center;
+    }
+  }
+  
