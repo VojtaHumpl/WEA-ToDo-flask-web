@@ -27,7 +27,7 @@ def create_app():
     Returns:
         app (Flask): Flask app
     """
-    app = Flask(__name__, template_folder=".")
+    app = Flask(__name__, template_folder=".", static_folder="../static")
     app.secret_key = b'\xa9\xb8\xc3dC\xec\x01\x8b\xba\xc6\xf4\tTB\x00@'
     
     # init login
