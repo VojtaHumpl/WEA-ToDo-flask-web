@@ -2,3 +2,4 @@ Flask
 Gunicorn
 pymongo
 flask_login
+pytest
