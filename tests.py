@@ -1,6 +1,6 @@
 import pytest
-from . import create_app
-from User import User
+from app import create_app
+from app.User import User
 
 # ----------------------------------- 
 # SETUP
